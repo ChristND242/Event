@@ -32,230 +32,315 @@
     
   </head>
   <body>
-  	
-  	<!-- Start Header -->
-	<header id="mu-hero" class="" role="banner">
-		<!-- Start menu  -->
-		<nav class="navbar navbar-fixed-top navbar-default mu-navbar">
-		  	<div class="container">
-			    <!-- Brand and toggle get grouped for better mobile display -->
-			    <div class="navbar-header">
-			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-			        <span class="sr-only">Toggle navigation</span>
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-			      </button>
+	<!-- Language Toggle Button -->
+  <div id="language-toggle" class="check-toggle check-toggle-round-flat" type="checkbox" style="text-align: right; padding: 10px;">
+	<button onclick="changeLanguage('fr')" span class="on">Fr</button>
+	<button onclick="changeLanguage('en')" span class="off">En</button>
+  </div>
 
-			      <!-- Logo -->
-			      <a class="navbar-brand" href="index.html">PE Event</a>
-
-			    </div>
-
-			    <!-- Collect the nav links, forms, and other content for toggling -->
-			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			      	<ul class="nav navbar-nav mu-menu navbar-right">
-			      		<li><a href="#mu-hero">Acceuil</a></li>
-				        <li><a href="#mu-about">À propos de l'événement</a></li>
-				        <li><a href="#mu-schedule">Programme</a></li>
-			            <li><a href="#mu-speakers">Intervenants</a></li>
-			            <li><a href="#mu-pricing">Tarifs</a></li>
-			            <li><a href="#mu-register">Inscription</a></li>
-			            <li><a href="#mu-sponsors">Partenaires</a></li>
-			            <li><a href="#mu-contact">Contact</a></li>
-			      	</ul>
-			    </div><!-- /.navbar-collapse -->
-		  	</div><!-- /.container-fluid -->
-		</nav>
-		<!-- End menu -->
-
-		<div class="mu-hero-overlay">
+  <!-- Start Header -->
+  <header id="mu-hero" role="banner">
+	  <nav class="navbar navbar-fixed-top navbar-default mu-navbar">
 			<div class="container">
-				<div class="mu-hero-area">
-
-					<!-- Start hero featured area -->
-					<div class="mu-hero-featured-area">
-						<!-- Start center Logo -->
-						<div class="mu-logo-area">
-							<!-- text based logo -->
-							<a class="mu-logo" href="#">Pona Ekolo Présente</a>
-							<!-- image based logo -->
-							<!-- <a class="mu-logo" href="#"><img src="assets/images/logo.jpg" alt="logo img"></a> -->
-						</div>
-						<!-- End center Logo -->
-
-						<div class="mu-hero-featured-content">
-
-							<h1>La grande Conférence internationale des affaires de Jinan session 2024</h1>
-							<h2>Organisée par la société Ubuntu</h2>
-							<p class="mu-event-date-line">12 octobre 2024. Jinan, Chine</p>
-						
-							<div class="mu-event-counter-area">
-								<div id="mu-event-counter">
-									<div class="counter-unit">
-										<p id="counter-days">0</p>
-										<p>jours</p>
-									</div>
-									<div class="counter-unit">
-										<p id="counter-hours">0</p>
-										<p>heures</p>
-									</div>
-									<div class="counter-unit">
-										<p id="counter-minutes">0</p>
-										<p>minutes</p>
-									</div>
-									<div class="counter-unit">
-										<p id="counter-seconds">0</p>
-										<p>secondes</p>
-									</div>
-								</div>
-							</div>
-						
-						</div>
-						
-						<style>
-							.mu-hero-featured-content {
-								text-align: center;
-								color: #fff;
-								background: linear-gradient(135deg, #6e44ff, #9f60ff);
-								padding: 40px;
-								border-radius: 10px;
-							}
-							
-							.mu-event-date-line {
-								font-size: 1.2rem;
-								margin-bottom: 20px;
-								color: #f0f0f0;
-								padding: 10px;
-								background-color: rgba(0, 0, 0, 0.3);
-								display: inline-block;
-								border-radius: 5px;
-							}
-							
-							.mu-event-counter-area {
-								margin-top: 30px;
-							}
-							
-							#mu-event-counter {
-								display: flex;
-								justify-content: center;
-								gap: 30px;
-								font-family: 'Arial', sans-serif;
-								flex-wrap: wrap; /* Enable wrapping for smaller screens */
-							}
-							
-							.counter-unit {
-								text-align: center;
-								font-size: 1.5rem;
-								background-color: rgba(255, 255, 255, 0.2);
-								padding: 20px;
-								border-radius: 10px;
-								box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-								flex: 1 1 100px; /* Allow the units to adjust their width */
-								margin: 10px; /* Add margin for better spacing */
-							}
-							
-							.counter-unit p:first-child {
-								font-size: 3rem;
-								margin: 0;
-							}
-							
-							.counter-unit p:last-child {
-								font-size: 1.2rem;
-								margin: 0;
-								text-transform: uppercase;
-								color: #fff;
-							}
-							
-							/* Responsive Design */
-							@media (max-width: 768px) {
-								.mu-hero-featured-content {
-									padding: 20px;
-								}
-							
-								#mu-event-counter {
-									gap: 20px; /* Reduce gap between units */
-								}
-							
-								.counter-unit {
-									font-size: 1.2rem;
-									padding: 15px;
-								}
-							
-								.counter-unit p:first-child {
-									font-size: 2.5rem;
-								}
-							
-								.counter-unit p:last-child {
-									font-size: 1rem;
-								}
-							}
-							
-							@media (max-width: 480px) {
-								.mu-event-date-line {
-									font-size: 1rem;
-								}
-							
-								#mu-event-counter {
-									flex-direction: column; /* Stack the units vertically on small screens */
-									gap: 10px;
-								}
-							
-								.counter-unit {
-									font-size: 1.2rem;
-									padding: 10px;
-								}
-							
-								.counter-unit p:first-child {
-									font-size: 2rem;
-								}
-							
-								.counter-unit p:last-child {
-									font-size: 0.9rem;
-								}
-							}
-							</style>
-							
-						
-						<script>
-						// Set the event date
-						var eventDate = new Date("October 12, 2024 00:00:00").getTime();
-						
-						// Update the countdown every second
-						var countdownFunction = setInterval(function() {
-						
-							// Get the current date and time
-							var now = new Date().getTime();
-						
-							// Calculate the difference between the event date and now
-							var timeDifference = eventDate - now;
-						
-							// Time calculations for days, hours, minutes, and seconds
-							var days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
-							var hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-							var minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
-							var seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
-						
-							// Display the result in the respective HTML elements
-							document.getElementById("counter-days").innerHTML = days;
-							document.getElementById("counter-hours").innerHTML = hours;
-							document.getElementById("counter-minutes").innerHTML = minutes;
-							document.getElementById("counter-seconds").innerHTML = seconds;
-						
-							// If the countdown is finished, display a message
-							if (timeDifference < 0) {
-								clearInterval(countdownFunction);
-								document.getElementById("mu-event-counter").innerHTML = "L'événement a commencé !";
-							}
-						}, 1000);
-						</script>						
-					<!-- End hero featured area -->
-
-				</div>
+			  <div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				  <span class="sr-only">Toggle navigation</span>
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.html" data-translate="brand">PE Event</a>
+			  </div>
+			  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav mu-menu navbar-right">
+						<li><a href="#mu-hero" data-translate="home">Acceuil</a></li>
+					  <li><a href="#mu-about" data-translate="about">À propos de l'événement</a></li>
+					  <li><a href="#mu-schedule" data-translate="schedule">Programme</a></li>
+					  <li><a href="#mu-speakers" data-translate="speakers">Intervenants</a></li>
+					  <li><a href="#mu-pricing" data-translate="pricing">Tarifs</a></li>
+					  <li><a href="#mu-register" data-translate="register">Inscription</a></li>
+					  <li><a href="#mu-sponsors" data-translate="sponsors">Partenaires</a></li>
+					  <li><a href="#mu-contact" data-translate="contact">Contact</a></li>
+					</ul>
+			  </div>
 			</div>
-		</div>
+	  </nav>
+	  <div class="mu-hero-overlay">
+		  <div class="container">
+			  <div class="mu-hero-area">
+				  <div class="mu-hero-featured-area">
+					  <div class="mu-logo-area">
+						  <a class="mu-logo" href="#" data-translate="companyName">Pona Ekolo Présente</a>
+					  </div>
+					  <div class="mu-hero-featured-content">
+						  <h1 data-translate="eventTitle">La grande Conférence internationale des affaires de Jinan session 2024</h1>
+						  <h2 data-translate="organizer">Organisée par la société Ubuntu</h2>
+						  <p class="mu-event-date-line" data-translate="eventDate">12 octobre 2024. Jinan, Chine</p>
+						  <div class="mu-event-counter-area">
+							  <div id="mu-event-counter">
+								  <div class="counter-unit">
+									  <p id="counter-days">0</p>
+									  <p data-translate="days">jours</p>
+								  </div>
+								  <div class="counter-unit">
+									  <p id="counter-hours">0</p>
+									  <p data-translate="hours">heures</p>
+								  </div>
+								  <div class="counter-unit">
+									  <p id="counter-minutes">0</p>
+									  <p data-translate="minutes">minutes</p>
+								  </div>
+								  <div class="counter-unit">
+									  <p id="counter-seconds">0</p>
+									  <p data-translate="seconds">secondes</p>
+								  </div>
+							  </div>
+						  </div>
+					  </div>		
+				  </div>
+			  </div>
+		  </div>
+	  </div>
+  </header>
+
+  <!-- Main Content Here -->
+  
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <!-- Bootstrap -->
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/custom.js"></script>
+  
+  <!-- Language Translation Script -->
+  <script>
+	const translations = {
+  en: {
+    // Header
+    brand: "PE Event",
+    home: "Home",
+    about: "About the Event",
+    schedule: "Schedule",
+    speakers: "Speakers",
+    pricing: "Pricing",
+    register: "Register",
+    sponsors: "Sponsors",
+    contact: "Contact",
+    // Hero Section
+    companyName: "Pona Ekolo Presents",
+    eventTitle: "Jinan International Business Conference 2024",
+    organizer: "Organized by Ubuntu Trade Company",
+    eventDate: "October 12, 2024. Jinan, China",
+    days: "days",
+    hours: "hours",
+    minutes: "minutes",
+    seconds: "seconds",
+    // About Section
+    aboutTitle: "About the Conference",
+    aboutDescription1: "The 2024 Jinan International Business Conference is a leading event to be held on October 12, 2024, at the Hilton Jinan in Shandong Province, China. This event, specifically designed for business leaders, entrepreneurs, and professionals, offers a unique opportunity to expand your network, gain valuable insights, and explore new business opportunities.",
+    aboutDescription2: "Participants will benefit from a carefully crafted program, including plenary sessions, panel discussions, and networking opportunities with industry leaders. The conference aims to equip attendees with the knowledge and contacts needed to take their businesses to new heights.",
+    // Start Video
+	vidDescription: "Watch the official event announcement",
+    // Schedule Section
+    scheduleTitle: "Event Schedule",
+    scheduleDescription: "The event will begin at 2:30 PM with arrival time and a photo session, allowing participants to settle in and capture memories. The opening ceremony is expected to start at 3:00 PM, officially marking the beginning of the event. Networking and booth presentation will follow at 5:00 PM, providing participants the chance to connect and explore new contacts. At 6:00 PM, participants will gather for dinner at Hilton, offering a chance to relax and continue conversations. The forum will conclude at 9:00 PM.",
+    dayOne: "October 12, 2024",
+    arrival: "Arrival and Photo Session",
+    opening: "Opening Ceremony",
+    networking: "Networking and Booth Presentation",
+    dinner: "Dinner at Hilton",
+    forumEnd: "End of the Forum",
+    // Speakers Section
+    speakersTitle: "Our Speakers",
+    speakersDescription: "Our event brings together a panel of distinguished speakers, each an expert in their respective field, to share insights, knowledge, and innovative ideas with our participants. These thought leaders, industry pioneers, and visionary professionals will address key topics, offering a unique opportunity to gain valuable perspectives and practical solutions.",
+    speaker1Name: "Patrick",
+    speaker1Role: "CEO - UBUNTU TRADE COMPANY",
+    speaker2Name: "Spany MBOUKOU",
+    speaker2Role: "CEO - SUMBA AWA",
+    speaker3Name: "Sandra LEBEL",
+    speaker3Role: "Host",
+    speaker4Name: "Hugo KOUAME",
+    speaker4Role: "CEO - IT CONSULTING",
+    speaker5Name: "MOUTOUO NGAMBIKI",
+    speaker5Role: "PhD - Leadership",
+    // Venue Section
+    venueTitle: "Venue",
+    venueAddress: "Jinan Luneng Hilton Hotel",
+    venueDetails: "2888 South Second Ring Road, Zhong District, Jinan City, China",
+    venueDescription: "Dear participants, please note that the venue of our event is located at 2888 South Second Ring Road, Zhong District, Jinan City, China. We recommend planning your itinerary in advance to ensure timely arrival. The venue is located in the bustling Zhong District and is easily accessible by various modes of transportation.",
+    // Pricing Section
+    pricingTitle: "Pricing",
+    pricingDescription: "Two ticket options are offered to meet different needs: the Regular Ticket at 250 RMB, which includes access for one person and dinner at Hilton, and the Business Ticket at 600 RMB, which includes access for two people, an exhibition booth, a presentation slot, and dinner for two at Hilton.",
+    popularTag: "Popular",
+    standardTitle: "Standard Package",
+    standard1Features: "One participant entry",
+    standard2Features: "Dinner at Hilton",
+    premiumTitle: "Premium Package",
+    premium1Features: "Two participant entry",
+    premium2Features: "Exhibition booth",
+    premium3Features: "Speaking slot",
+    premium4Features: "Dinner at Hilton",
+    registerNow: "Register Now",
+    // Register Section
+    registerTitle: "Registration Form",
+    registerDescription: "Please fill out the registration form below to secure your spot at the upcoming event. Ensure that all required fields are completed accurately, including your contact information and any special requests.",
+    fullNamePlaceholder: "Full Name",
+    emailPlaceholder: "Enter your email",
+    phonePlaceholder: "Your phone number",
+    ticketOption: "Ticket Option",
+    submitButton: "Submit",
+    // FAQ Section
+    faqTitle: "Frequently Asked Questions",
+    faqDescription: "Welcome to our FAQ section. We have compiled a list of the most frequently asked questions to help you quickly find the information you need.",
+    faqQuestion1: "How can I register for the event?",
+    faqAnswer1: "You can register for the event by filling out the online registration form available on our website.",
+    faqQuestion2: "What is the event schedule?",
+    faqAnswer2: "The event will take place on October 12, 2024. The schedule includes arrival and a photo session at 2:30 PM, followed by the opening ceremony at 3:00 PM. Networking sessions, booth presentations, and dinner are also part of the day's activities. The event concludes at 9:00 PM.",
+    faqQuestion3: "Are there any registration fees?",
+    faqAnswer3: "Yes, registration fees are required to attend the event. These fees are displayed on the registration form.",
+    faqQuestion4: "Will meals be provided?",
+    faqAnswer4: "Yes, dinner will be served at Hilton as part of the event program.",
+    faqQuestion5: "Can I update my registration information?",
+    faqAnswer5: "Yes, you can update your registration information by contacting our support team.",
+    // Sponsors Section
+    sponsorsTitle: "Our Sponsors",
+    sponsorsDescription: "Our event is made possible through the generous support and collaboration of our esteemed sponsors and partners.",
+    // Contact Section
+    contactTitle: "Contact Us",
+    contactDescription: "We appreciate your inquiries and are here to assist you with any questions or concerns you may have regarding the event.",
+    // All right reserved 
+	footerTitle: "All right reserved."
+  },
+  fr: {
+    // Header
+    brand: "PE Event",
+    home: "Acceuil",
+    about: "À propos de l'événement",
+    schedule: "Programme",
+    speakers: "Intervenants",
+    pricing: "Tarifs",
+    register: "Inscription",
+    sponsors: "Partenaires",
+    contact: "Contact",
+    // Hero Section
+    companyName: "Pona Ekolo Présente",
+    eventTitle: "La grande Conférence internationale des affaires de Jinan session 2024",
+    organizer: "Organisée par la société Ubuntu",
+    eventDate: "12 octobre 2024. Jinan, Chine",
+    days: "jours",
+    hours: "heures",
+    minutes: "minutes",
+    seconds: "secondes",
+    // About Section
+    aboutTitle: "À propos de la conférence",
+    aboutDescription1: "2024 Jinan International Business Conference est un événement de premier plan qui se tiendra le 12 octobre 2024 à l'Hilton Jinan, dans la province du Shandong, en Chine. Cet événement, spécialement conçu pour les chefs d'entreprise, les entrepreneurs et les professionnels, offre une occasion unique de développer son réseau.",
+    aboutDescription2: "Les participants bénéficieront d'un programme soigneusement élaboré, comprenant des sessions plénières, des tables rondes et des opportunités de réseautage avec des leaders du secteur.",
+    // Start Video
+	vidDescription: "Watch the official event announcement",
+    // Schedule Section
+    scheduleTitle: "Détail du programme",
+    scheduleDescription: "L'événement débutera à 14h30 heure d'arrivée et séance photo. La cérémonie d'ouverture commencera à 15h00, suivi de réseautage et présentation à 17h00. Dîner à 18h00, clôture à 21h00.",
+    dayOne: "12 Octobre 2024",
+    arrival: "Heure d'arrivée et séance photo",
+    opening: "Cérémonie d'ouverture",
+    networking: "Networking et présentation du stand",
+    dinner: "Dîner au Hilton",
+    forumEnd: "Fin du forum",
+    // Speakers Section
+    speakersTitle: "Nos intervenants",
+    speakersDescription: "Notre événement réunit un panel d'éminents intervenants, chacun expert dans son domaine respectif, pour partager des idées, des connaissances et des idées innovantes avec nos participants.",
+    speaker1Name: "Patrick",
+    speaker1Role: "PDG - UBUNTU TRADE COMPANY",
+    speaker2Name: "Spany MBOUKOU",
+    speaker2Role: "PDG - SUMBA AWA",
+    speaker3Name: "Sandra LEBEL",
+    speaker3Role: "Hôte",
+    speaker4Name: "Hugo KOUAME",
+    speaker4Role: "PDG - IT CONSULTING",
+    speaker5Name: "MOUTOUO NGAMBIKI",
+    speaker5Role: "PhD - Leadership",
+    // Venue Section
+    venueTitle: "Lieu",
+    venueAddress: "Jinan Luneng Hilton Hotel",
+    venueDetails: "N° 2888, deuxième périphérique sud, district de Zhong, ville de Jinan, Chine",
+    venueDescription: "Chers participants, nous vous informons que le lieu de notre événement est situé au N° 2888, deuxième périphérique sud, district de Zhong, ville de Jinan, Chine.",
+    // Pricing Section
+    pricingTitle: "Tarifs",
+    pricingDescription: "Deux options de billets sont proposées : le Billet Normal à 250 RMB, et le Billet pour Chef d'Entreprise à 600 RMB.",
+    popularTag: "Populaire",
+    standardTitle: "Formule Standard",
+    standard1Features: "Entrée pour un participant",
+    standard2Features: "Dîner au Hilton",
+    premiumTitle: "Formule Premium",
+    premium1Features: "Accès pour deux personnes",
+    premium2Features: "Stand d'exposition",
+    premium3Features: "Prise de parole",
+    premium4Features: "Dîner au Hilton",
+    registerNow: "Réservez maintenant",
+    // Register Section
+    registerTitle: "Formulaire d'inscription",
+    registerDescription: "Veuillez remplir le formulaire d'inscription ci-dessous pour réserver votre place à l'événement.",
+    fullNamePlaceholder: "Votre nom complet",
+    emailPlaceholder: "Entrez votre email",
+    phonePlaceholder: "Votre numéro de téléphone",
+    ticketOption: "Option de billet",
+    submitButton: "Soumettre",
+    // FAQ Section
+    faqTitle: "FAQ",
+    faqDescription: "Bienvenue dans notre section FAQ. Nous avons compilé une liste des questions les plus fréquemment posées.",
+    faqQuestion1: "Comment puis-je m'inscrire à l'événement ?",
+    faqAnswer1: "Vous pouvez vous inscrire à l'événement en remplissant le formulaire d'inscription en ligne disponible sur notre site.",
+    faqQuestion2: "Quel est le programme de l'événement ?",
+    faqAnswer2: "L'événement aura lieu le 12 octobre 2024. Le programme comprend une arrivée à 14h30, cérémonie d'ouverture à 15h00, networking, et dîner. L'événement se termine à 21h00.",
+    faqQuestion3: "Y a-t-il des frais d’inscription ?",
+    faqAnswer3: "Oui, des frais d'inscription sont exigés pour assister à l'événement.",
+    faqQuestion4: "Y aura-t-il des repas fournis ?",
+    faqAnswer4: "Oui, le dîner sera servi au Hilton.",
+    faqQuestion5: "Puis-je mettre à jour mes informations d’inscription ?",
+    faqAnswer5: "Oui, vous pouvez mettre à jour vos informations en contactant notre équipe d'assistance.",
+    // Sponsors Section
+    sponsorsTitle: "Nos commanditaires",
+    sponsorsDescription: "Notre événement est rendu possible grâce au généreux soutien de nos commanditaires.",
+    // Contact Section
+    contactTitle: "Contactez-nous",
+    contactDescription: "Nous apprécions vos demandes et sommes là pour répondre à toutes vos questions concernant l'événement."
+  }
+};
+;
+
+    function changeLanguage(language) {
+        // Change regular text content
+        document.querySelectorAll("[data-translate]").forEach(function(element) {
+          const key = element.getAttribute("data-translate");
+          element.textContent = translations[language][key];
+        });
+
+        // placeholder attributes for input and textarea
+        document.getElementById("name").setAttribute("placeholder", translations[language].fullNamePlaceholder);
+        document.getElementById("email").setAttribute("placeholder", translations[language].emailPlaceholder);
+        document.getElementById("message").setAttribute("placeholder", translations[language].messagePlaceholder);
+        document.getElementById("telephone").setAttribute("placeholder", translations[language].phonePlaceholder);
+        document.getElementById("message").setAttribute("placeholder", translations[language].messagePlaceholder);
+
+        // Change ticket options
+        document.querySelectorAll("ticket").forEach(function (element) {
+            const key = element.getAttribute("data-translate");
+            element.textContent = translations[language][key];
+        });
+
+        // Update the page title
+        document.title = translations[language].pageTitle;
+      }
+
+      // Set default language (French)
+      changeLanguage('fr');
+  </script>
+
+</body>
+
 	</header>
 	<!-- End Header -->
+	 
 	
 	<!-- Start main content -->
 	<main role="main">
@@ -274,9 +359,9 @@
 								</div>
 								<div class="col-md-6">
 									<div class="mu-about-right">
-										<h2>À propos de la conférence</h2>
-											<p align="justify">2024 Jinan International Business Conference est un événement de premier plan qui se tiendra le 12 octobre 2024 à l'Hilton Jinan, dans la province du Shandong, en Chine. Cet événement, spécialement conçu pour les chefs d'entreprise, les entrepreneurs et les professionnels, offre une occasion unique de développer son réseau, d'acquérir des connaissances précieuses et d'explorer de nouvelles opportunités commerciales. Organisé par Ubuntu International Trade Company, cette conférence promet une journée riche en apprentissages, en réseautage et en croissance dans l'une des régions économiques les plus dynamiques de Chine. </p>
-                        					<p align="justify">Les participants bénéficieront d'un programme soigneusement élaboré, comprenant des sessions plénières, des tables rondes et des opportunités de réseautage avec des leaders du secteur. La conférence vise à fournir aux participants les connaissances et les contacts nécessaires pour propulser leurs entreprises vers de nouveaux sommets. Que vous souhaitiez explorer de nouveaux marchés, apprendre des expériences d'entrepreneurs à succès ou établir des liens avec des partenaires et des investisseurs potentiels, cet événement est conçu pour répondre à vos attentes.</p>
+										<h2 data-translate="aboutTitle">À propos de la conférence</h2>
+											<p align="justify" data-translate="aboutDescription1">2024 Jinan International Business Conference est un événement de premier plan qui se tiendra le 12 octobre 2024 à l'Hilton Jinan, dans la province du Shandong, en Chine. Cet événement, spécialement conçu pour les chefs d'entreprise, les entrepreneurs et les professionnels, offre une occasion unique de développer son réseau, d'acquérir des connaissances précieuses et d'explorer de nouvelles opportunités commerciales. Organisé par Ubuntu International Trade Company, cette conférence promet une journée riche en apprentissages, en réseautage et en croissance dans l'une des régions économiques les plus dynamiques de Chine. </p>
+                        					<p align="justify" data-translate="aboutDescription2">Les participants bénéficieront d'un programme soigneusement élaboré, comprenant des sessions plénières, des tables rondes et des opportunités de réseautage avec des leaders du secteur. La conférence vise à fournir aux participants les connaissances et les contacts nécessaires pour propulser leurs entreprises vers de nouveaux sommets. Que vous souhaitiez explorer de nouveaux marchés, apprendre des expériences d'entrepreneurs à succès ou établir des liens avec des partenaires et des investisseurs potentiels, cet événement est conçu pour répondre à vos attentes.</p>
                         
 									</div>
 								</div>
@@ -297,7 +382,7 @@
 					<div class="row">
 						<div class="col-md-12">
 							<div class="mu-video-area">
-								<h2>Regardez l'annonce officielle de l'événement</h2>
+								<h2 data-translate="vidDescription">Regardez l'annonce officielle de l'événement</h2>
 								<a class="mu-video-play-btn" href="#"><i class="fa fa-play" aria-hidden="true"></i></a>
 							</div>
 						</div>
@@ -325,14 +410,14 @@
 						<div class="mu-schedule-area">
 
 							<div class="mu-title-area">
-								<h2 class="mu-title">Détail du programme</h2>
-								<p align="justify">L'événement débutera à 14h30 heure d'arrivée et séance photo, permettant aux participants de s'installer et de capturer des souvenirs. La cérémonie d'ouverture devrait commencer à 15h00, marquant officiellement le début de l'événement. Après la cérémonie, il y aura une opportunité de réseautage et de présentation à 17h00, offrant aux participants la chance pour se connecter et explorer de nouveaux contacts. À 18h00, les participants se rassembleront pour dîner au Hilton, offrant une chance de se détendre et de poursuivre les conversations dans un cadre plus détendu. Le forum se terminera à 21h00, concluant une journée remplie d'interactions et d'événements enrichissants.</p>
+								<h2 class="mu-title" data-translate="scheduleTitle">Détail du programme</h2>
+								<p align="justify" data-translate="scheduleDescription">L'événement débutera à 14h30 heure d'arrivée et séance photo, permettant aux participants de s'installer et de capturer des souvenirs. La cérémonie d'ouverture devrait commencer à 15h00, marquant officiellement le début de l'événement. Après la cérémonie, il y aura une opportunité de réseautage et de présentation à 17h00, offrant aux participants la chance pour se connecter et explorer de nouveaux contacts. À 18h00, les participants se rassembleront pour dîner au Hilton, offrant une chance de se détendre et de poursuivre les conversations dans un cadre plus détendu. Le forum se terminera à 21h00, concluant une journée remplie d'interactions et d'événements enrichissants.</p>
 							</div>
 
 							<div class="mu-schedule-content-area">
 								<!-- Nav tabs -->
 								<ul class="nav nav-tabs mu-schedule-menu" role="tablist">
-								    <li role="presentation" class="active"><a href="#first-day" aria-controls="first-day" role="tab" data-toggle="tab">12 Oct 2024</a></li>
+								    <li role="presentation" class="active"><a href="#first-day" aria-controls="first-day" role="tab" data-toggle="tab" data-translate="dayOne">12 Oct 2024</a></li>
 								    <!-- <li role="presentation"><a href="#second-day" aria-controls="second-day" role="tab" data-toggle="tab">2 Day / 20 Feb</a></li>
 								    <li role="presentation"><a href="#third-day" aria-controls="third-day" role="tab" data-toggle="tab">3 Day / 21 Feb</a></li>
 								    
@@ -345,14 +430,14 @@
 								    		<li>
 								    			<div class="mu-single-event">
 								    				<p class="mu-event-time">14:30</p>
-								    				<h3>Heure d'arrivée et séance photo</h3>
+								    				<h3 data-translate="arrival">Heure d'arrivée et séance photo</h3>
 								    			</div>
 								    		</li>
 								    		<li>
 								    			<div class="mu-single-event">
 								    				<!--<img src="assets/images/speaker-1.jpg" alt="event speaker">-->
 								    				<p class="mu-event-time">15:00</p>
-								    				<h3>cérémonie d'ouverture</h3>
+								    				<h3 data-translate="opening">cérémonie d'ouverture</h3>
 								    				<!--<span>By Karl Groves</span>-->
 								    			</div>
 								    		</li>
@@ -360,7 +445,7 @@
 								    			<div class="mu-single-event">
 								    				<!--<img src="assets/images/speaker-2.jpg" alt="event speaker">-->
 								    				<p class="mu-event-time">17:00</p>
-								    				<h3>Networking et présentation du stand</h3>
+								    				<h3 data-translate="networking">Networking et présentation du stand</h3>
 								    				<!--<span>By Sarah Dransner</span>-->
 								    			</div>
 								    		</li>
@@ -368,14 +453,14 @@
 								    			<div class="mu-single-event">
 								    				<!--<img src="assets/images/speaker-3.jpg" alt="event speaker">-->
 								    				<p class="mu-event-time">18:00</p>
-								    				<h3>Dîner au Hilton</h3>
+								    				<h3 data-translate="dinner">Dîner au Hilton</h3>
 								    				<!--<span>By Ned Stark</span>-->
 								    			</div>
 								    		</li>
 								    		<li>
 								    			<div class="mu-single-event">
 								    				<p class="mu-event-time">21:00</p>
-								    				<h3>Fin du forum</h3>
+								    				<h3 data-translate="forumEnd">Fin du forum</h3>
 								    			</div>
 								    		</li>
 								    	</ul>
@@ -480,8 +565,8 @@
 						<div class="mu-speakers-area">
 
 							<div class="mu-title-area">
-								<h2 class="mu-title">Nos intervenants</h2>
-								<p>Notre événement réunit un panel d'éminents intervenants, chacun expert dans son domaine respectif, pour partager des idées, des connaissances et des idées innovantes avec nos participants. Ces leaders d'opinion, pionniers de l'industrie et professionnels visionnaires aborderont des sujets clés, offrant une occasion unique d'acquérir des perspectives précieuses et des solutions pratiques. Nous sommes honorés d'accueillir un groupe d'individus aussi diversifiés et accomplis qui non seulement façonnent l'avenir de notre industrie, mais qui sont également passionnés par le partage de leur expertise avec vous. Dans cette section, vous pouvez en apprendre davantage sur nos intervenants.</p>
+								<h2 class="mu-title" data-translate="speakersTitle">Nos intervenants</h2>
+								<p data-translate="speakersDescription">Notre événement réunit un panel d'éminents intervenants, chacun expert dans son domaine respectif, pour partager des idées, des connaissances et des idées innovantes avec nos participants. Ces leaders d'opinion, pionniers de l'industrie et professionnels visionnaires aborderont des sujets clés, offrant une occasion unique d'acquérir des perspectives précieuses et des solutions pratiques. Nous sommes honorés d'accueillir un groupe d'individus aussi diversifiés et accomplis qui non seulement façonnent l'avenir de notre industrie, mais qui sont également passionnés par le partage de leur expertise avec vous. Dans cette section, vous pouvez en apprendre davantage sur nos intervenants.</p>
 							</div>
 
 							<!-- Start Speakers Content -->
@@ -493,8 +578,8 @@
 									<div class="mu-single-speakers">
 										<img src="assets/images/speaker-1.jpg" alt="speaker img">
 										<div class="mu-single-speakers-info">
-											<h3>Patrick</h3>
-											<p>CEO - UBUNTU TRADE COMPANY</p>
+											<h3 data-translate="speaker1Name">Patrick</h3>
+											<p data-translate="speaker1Role">CEO - UBUNTU TRADE COMPANY</p>
 											<ul class="mu-single-speakers-social">
 												<li><a href="#"><i class="fa fa-facebook"></i></a></li>
 												<li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -508,8 +593,8 @@
 									<div class="mu-single-speakers">
 										<img src="assets/images/speaker-2.jpg" alt="speaker img">
 										<div class="mu-single-speakers-info">
-											<h3>Spany MBOUKOU</h3>
-											<p>CEO - SUMBA AWA</p>
+											<h3 data-translate="speaker2Name">Spany MBOUKOU</h3>
+											<p data-translate="speaker2Role">CEO - SUMBA AWA</p>
 											<ul class="mu-single-speakers-social">
 												<li><a href="#"><i class="fa fa-facebook"></i></a></li>
 												<li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -524,8 +609,8 @@
 									<div class="mu-single-speakers">
 										<img src="assets/images/speaker-4.jpg" alt="speaker img">
 										<div class="mu-single-speakers-info">
-											<h3>Sandra LEBEL</h3>
-											<p>Host</p>
+											<h3 data-translate="speaker3Name">Sandra LEBEL</h3>
+											<p data-translate="speaker3Role">Host</p>
 											<ul class="mu-single-speakers-social">
 												<li><a href="#"><i class="fa fa-facebook"></i></a></li>
 												<li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -540,8 +625,8 @@
 									<div class="mu-single-speakers">
 										<img src="assets/images/speaker-3.jpg" alt="speaker img">
 										<div class="mu-single-speakers-info">
-											<h3>Hugo KOUAME</h3>
-											<p>CEO - IT CONSULTING</p>
+											<h3 data-translate="speaker4Name">Hugo KOUAME</h3>
+											<p data-translate="speaker4Role">CEO - IT CONSULTING</p>
 											<ul class="mu-single-speakers-social">
 												<li><a href="#"><i class="fa fa-facebook"></i></a></li>
 												<li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -555,8 +640,8 @@
 									<div class="mu-single-speakers">
 										<img src="assets/images/speaker-5.jpg" alt="speaker img">
 										<div class="mu-single-speakers-info">
-											<h3>MOUTOUO NGAMBIKI </h3>
-											<p>PhD - Leadership</p>
+											<h3 data-translate="speaker5Name">MOUTOUO NGAMBIKI </h3>
+											<p data-translate="speaker5Role">PhD - Leadership</p>
 											<ul class="mu-single-speakers-social">
 												<li><a href="#"><i class="fa fa-facebook"></i></a></li>
 												<li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -636,10 +721,10 @@
 
 					<div class="col-md-6">
 						<div class="mu-venue-address">
-							<h2>LIEU <i class="fa fa-chevron-right" aria-hidden="true"></i></h2>
-							<h3>Jinan Luneng Hilton Hotel</h3>
-							<h4>N° 2888, deuxième périphérique sud, district de Zhong, ville de Jinan, Chine</h4>
-							<p>Chers participants, nous vous informons que le lieu de notre événement est situé au N° 2888, deuxième périphérique sud, district de Zhong, ville de Jinan, Chine. Nous vous recommandons de planifier votre itinéraire à l'avance pour vous assurer d'arriver à l'heure. Le lieu est situé dans le quartier animé de Zhong, facilement accessible par divers modes de transport. Si vous arrivez en voiture, de nombreuses places de parking sont disponibles à proximité. Pour ceux qui utilisent les transports en commun, le lieu est bien desservi par plusieurs lignes de bus et de métro. Nous avons hâte de vous accueillir dans cet endroit privilégié pour un événement tant engageant et fructueux!</p>
+							<h2 data-translate="venueTitle">LIEU <i class="fa fa-chevron-right" aria-hidden="true"></i></h2>
+							<h3 data-translate="venueAddress">Jinan Luneng Hilton Hotel</h3>
+							<h4 data-translate="venueDetails">N° 2888, deuxième périphérique sud, district de Zhong, ville de Jinan, Chine</h4>
+							<p data-translate="venueDescription">Chers participants, nous vous informons que le lieu de notre événement est situé au N° 2888, deuxième périphérique sud, district de Zhong, ville de Jinan, Chine. Nous vous recommandons de planifier votre itinéraire à l'avance pour vous assurer d'arriver à l'heure. Le lieu est situé dans le quartier animé de Zhong, facilement accessible par divers modes de transport. Si vous arrivez en voiture, de nombreuses places de parking sont disponibles à proximité. Pour ceux qui utilisent les transports en commun, le lieu est bien desservi par plusieurs lignes de bus et de métro. Nous avons hâte de vous accueillir dans cet endroit privilégié pour un événement tant engageant et fructueux!</p>
 						</div>
 					</div>
 
@@ -656,8 +741,8 @@
 						<div class="mu-pricing-area">
 							
 							<div class="mu-title-area">
-								<h2 class="mu-title">Tarifs</h2>
-								<p>Deux options de billets sont proposées pour répondre aux différents besoins : le Billet Normal à 250 RMB, qui comprend l'accès pour une personne et un dîner à l'Hilton, et le Billet pour Chef d'Entreprise à 600 RMB, incluant l'accès pour deux personnes, un stand d'exposition, un créneau de présentation et un dîner pour deux à l'Hilton. Cette flexibilité garantit que les professionnels, qu'ils soient seuls ou en équipe, peuvent tirer pleinement parti des opportunités offertes par la conférence.</p>
+								<h2 class="mu-title" data-translate="pricingTitle">Tarifs</h2>
+								<p data-translate="pricingDescription">Deux options de billets sont proposées pour répondre aux différents besoins : le Billet Normal à 250 RMB, qui comprend l'accès pour une personne et un dîner à l'Hilton, et le Billet pour Chef d'Entreprise à 600 RMB, incluant l'accès pour deux personnes, un stand d'exposition, un créneau de présentation et un dîner pour deux à l'Hilton. Cette flexibilité garantit que les professionnels, qu'ils soient seuls ou en équipe, peuvent tirer pleinement parti des opportunités offertes par la conférence.</p>
 							</div>
 							
 							<div class="mu-pricing-conten">
@@ -686,19 +771,19 @@
 									<!-- single price item -->
 									<div class="col-md-4">
 										<div class="mu-single-price mu-popular-price">
-											<span class="mu-price-tag">Populaire</span>
+											<span class="mu-price-tag" data-translate="popularTag">Populaire</span>
 											<div class="mu-single-price-head">
 												<span class="mu-currency">¥</span>
 												<span class="mu-rate">250</span>
 												<!--<span class="mu-time">/</span>-->
 											</div>
-											<h3 class="mu-price-title">Formule Standard</h3>
+											<h3 class="mu-price-title" data-translate="standardTitle">Formule Standard</h3>
 											<ul>
-												<li>Formule Standard</li>
-												<li>Entrée pour un participant</li>
-												<li>Dîner au Hilton</li>
+												<li data-translate="standardTitle">Formule Standard</li>
+												<li data-translate="standard1Features">Entrée pour un participant</li>
+												<li data-translate="standard2Features">Dîner au Hilton</li>
 											</ul>
-											<a class="mu-register-btn" href="https://pay.ponaekolo.me/" target="_blank">Réservez maintenant</a>
+											<a class="mu-register-btn" href="https://pay.ponaekolo.me/" target="_blank" data-translate="registerNow">Réservez maintenant</a>
 										</div>
 									</div>
 									<!-- / single price item -->
@@ -712,15 +797,15 @@
 												<span class="mu-rate">600</span>
 												<!--<span class="mu-time">/</span>-->
 											</div>
-											<h3 class="mu-price-title">Formule Premium</h3>
+											<h3 class="mu-price-title" data-translate="premiumTitle">Formule Premium</h3>
 											<ul>
-												<li>Formule Premium</li>
-												<li>Accès pour deux personnes</li>
-												<li>Stand d'exposition</li>
-												<li>Prise de parole</li>
-												<li>Diner au Hilton</li>
+												<li data-translate="premiumTitle">Formule Premium</li>
+												<li data-translate="premium1Features">Accès pour deux personnes</li>
+												<li data-translate="premium2Features">Stand d'exposition</li>
+												<li data-translate="premium3Features">Prise de parole</li>
+												<li data-translate="premium4Features">Diner au Hilton</li>
 											</ul>
-											<a class="mu-register-btn" href="https://pay.ponaekolo.me/" target="_blank"> Réservez maintenant</a>
+											<a class="mu-register-btn" href="https://pay.ponaekolo.me/" target="_blank" data-translate="registerNow"> Réservez maintenant</a>
 										</div>
 									</div>
 									<!-- / single price item -->
@@ -743,8 +828,8 @@
 						<div class="mu-register-area">
 
 							<div class="mu-title-area">
-								<h2 class="mu-title">Formulaire d'inscription</h2>
-								<p>Veuillez remplir le formulaire d'inscription ci-dessous pour réserver votre place à l'événement à venir. Assurez-vous que tous les champs obligatoires sont remplis avec précision, y compris vos coordonnées et toute demande spéciale. Une fois soumis, vous recevrez un e-mail de confirmation avec des instructions supplémentaires et des mises à jour sur l'événement. Si vous rencontrez des problèmes lors de votre inscription, n'hésitez pas à contacter notre équipe d'assistance. Nous attendons votre participation avec impatience !</p>
+								<h2 class="mu-title" data-translate="registerTitle">Formulaire d'inscription</h2>
+								<p data-translate="registerDescription">Veuillez remplir le formulaire d'inscription ci-dessous pour réserver votre place à l'événement à venir. Assurez-vous que tous les champs obligatoires sont remplis avec précision, y compris vos coordonnées et toute demande spéciale. Une fois soumis, vous recevrez un e-mail de confirmation avec des instructions supplémentaires et des mises à jour sur l'événement. Si vous rencontrez des problèmes lors de votre inscription, n'hésitez pas à contacter notre équipe d'assistance. Nous attendons votre participation avec impatience !</p>
 							</div>
 
 							<div class="mu-register-content">
@@ -753,13 +838,13 @@
 									<div class="row">
 										<div class="col-md-6">
 											<div class="form-group">                
-												<input type="text" class="form-control" placeholder="Votre nom complet" id="name" name="name" required="">
+												<input type="text" class="form-control" placeholder="Votre nom complet"  id="name" name="name" required="" data-translate-placeholder="fullNamePlaceholder">
 											</div>
 										</div>
 
 										<div class="col-md-6">
 											<div class="form-group">                
-												<input type="email" class="form-control" placeholder="Entrez votre email" id="email" name="email" required="">
+												<input type="email" class="form-control" data-translate="emailPlaceholder" placeholder="Entrez votre email" id="email" name="email" required="">
 											</div>     
 										</div>
 									</div>
@@ -767,7 +852,7 @@
 									<div class="row">
 										<div class="col-md-6">
 											<div class="form-group">                
-												<input type="text" class="form-control" placeholder="Votre numéro de téléphone" id="telephone" name="telephone" required="">
+												<input type="text" class="form-control" data-translate="phonePlaceholder" placeholder="Votre numéro de téléphone" id="telephone" name="telephone" required="">
 											</div>
 										</div>
 										<div class="col-md-6">
@@ -781,7 +866,7 @@
 										</div>
 									</div>
 
-									<button type="submit" class="mu-reg-submit-btn">SOUMETTRE</button>
+									<button type="submit" class="mu-reg-submit-btn" data-translate="submitButton">SOUMETTRE</button>
 
 					            </form>
 							</div>
@@ -801,8 +886,8 @@
 						<div class="mu-faq-area">
 
 							<div class="mu-title-area">
-								<h2 class="mu-title">FAQ</h2>
-								<p>Bienvenue dans notre section Foire aux questions (FAQ). Nous avons compilé ici une liste des questions les plus fréquemment posées pour vous aider à trouver rapidement les informations dont vous avez besoin. Que vous soyez curieux de connaître le programme de l'événement, le processus d'inscription ou les détails du lieu, vous trouverez les réponses ici. Si vous avez une question qui n'est pas traitée dans cette section, n'hésitez pas à contacter notre équipe d'assistance pour obtenir de l'aide.</p>
+								<h2 class="mu-title" data-translate="faqTitle">FAQ</h2>
+								<p data-translate="faqDescription">Bienvenue dans notre section Foire aux questions (FAQ). Nous avons compilé ici une liste des questions les plus fréquemment posées pour vous aider à trouver rapidement les informations dont vous avez besoin. Que vous soyez curieux de connaître le programme de l'événement, le processus d'inscription ou les détails du lieu, vous trouverez les réponses ici. Si vous avez une question qui n'est pas traitée dans cette section, n'hésitez pas à contacter notre équipe d'assistance pour obtenir de l'aide.</p>
 							</div>
 
 							<div class="mu-faq-content">
@@ -813,12 +898,12 @@
 							          <div class="panel-heading">
 							            <h4 class="panel-title">
 							              <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true">
-							                <span class="fa fa-angle-down"></span> Comment puis-je m'inscrire à l'événement ?
+							                <span class="fa fa-angle-down" data-translate="faqQuestion1">Comment puis-je m'inscrire à l'événement ?</span> 
 							              </a>
 							            </h4>
 							          </div>
 							          <div id="collapseOne" class="panel-collapse collapse in">
-							            <div class="panel-body">
+							            <div class="panel-body" data-translate="faqAnswer1">
 											Vous pouvez vous inscrire à l'événement en remplissant le formulaire d'inscription en ligne disponible sur notre site Web. Une fois le formulaire complété et soumis, vous recevrez un e-mail de confirmation contenant les détails de votre inscription.
 							            </div>
 							          </div>
@@ -828,12 +913,12 @@
 							          <div class="panel-heading">
 							            <h4 class="panel-title">
 							              <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-							                <span class="fa fa-angle-up"></span> Quel est le programme de l'événement ?
+							                <span class="fa fa-angle-up" data-translate="faqQuestion2">Quel est le programme de l'événement ?</span> 
 							              </a>
 							            </h4>
 							          </div>
 							          <div id="collapseTwo" class="panel-collapse collapse">
-							            <div class="panel-body">
+							            <div class="panel-body" data-translate="faqAnswer2">
 											L'événement aura lieu le 12 octobre 2024. Le programme comprend l'heure d'arrivée et une séance photo à 14h30, suivie de la cérémonie d'ouverture à 15h00. Des séances de réseautage, des présentations de stands et un dîner feront également partie des activités de la journée. L'événement se termine à 21h00.
 							            </div>
 							          </div>
@@ -843,12 +928,12 @@
 							          <div class="panel-heading">
 							            <h4 class="panel-title">
 							              <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-							                <span class="fa fa-angle-up"></span> Y a-t-il des frais d’inscription pour assister à l’événement ? 
+							                <span class="fa fa-angle-up" data-translate="faqQuestion3">Y a-t-il des frais d’inscription pour assister à l’événement ?</span>  
 							              </a>
 							            </h4>
 							          </div>
 							          <div id="collapseThree" class="panel-collapse collapse">
-							            <div class="panel-body">
+							            <div class="panel-body" data-translate="faqAnswer3">
 											Oui, des frais d'inscription sont exigés pour participer à l'événement. Ces frais sont indiqués sur le formulaire d'inscription et peuvent être réglés à l'aide des méthodes de paiement disponibles telles qu'Alipay et Wechat, même le virement bancaire est accepté. Le montant est indiqué en RMB.
 							            </div>
 							          </div>
@@ -858,12 +943,12 @@
 							          <div class="panel-heading">
 							            <h4 class="panel-title">
 							              <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
-							                <span class="fa fa-angle-up"></span> Y aura-t-il des repas fournis pendant l’événement ? 
+							                <span class="fa fa-angle-up" data-translate="faqQuestion4">Y aura-t-il des repas fournis pendant l’événement ?</span>  
 							              </a>
 							            </h4>
 							          </div>
 							          <div id="collapseFour" class="panel-collapse collapse">
-							            <div class="panel-body">
+							            <div class="panel-body" data-translate="faqAnswer4">
 											Oui, le dîner sera servi au Hilton à 18h00 dans le cadre du programme de l'événement. Si vous avez des restrictions alimentaires, veuillez les indiquer dans le formulaire d'inscription.
 							            </div>
 							          </div>
@@ -873,12 +958,12 @@
 							          <div class="panel-heading">
 							            <h4 class="panel-title">
 							              <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
-							                <span class="fa fa-angle-up"></span> Puis-je mettre à jour mes informations d’inscription après les avoir soumises ? 
+							                <span class="fa fa-angle-up" data-translate="faqQuestion5">Puis-je mettre à jour mes informations d’inscription après les avoir soumises ?</span>  
 							              </a>
 							            </h4>
 							          </div>
 							          <div id="collapseFive" class="panel-collapse collapse">
-							            <div class="panel-body">
+							            <div class="panel-body" data-translate="faqAnswer5">
 											Oui, vous pouvez mettre à jour vos informations d'inscription en contactant notre équipe d'assistance. Veuillez inclure votre identifiant d'inscription dans votre demande pour nous aider à vous aider rapidement.
 							            </div>
 							          </div>
@@ -903,8 +988,8 @@
 						<div class="mu-sponsors-area text-center">
 							
 							<div class="mu-title-area">
-								<h2 class="mu-title">Nos commanditaires</h2>
-								<p>Notre événement est rendu possible grâce au généreux soutien et à la collaboration de nos estimés commanditaires et partenaires. Ces organisations partagent notre vision et ont mis à contribution leurs ressources et leur expertise pour nous aider à offrir une expérience mémorable à tous les participants. Nous sommes fiers de mettre en valeur leurs contributions et vous encourageons à en apprendre davantage sur chacune d’elles. Leur engagement envers l’innovation, l’excellence et l’engagement communautaire s’aligne sur les valeurs fondamentales de notre événement, et nous sommes reconnaissants de leur partenariat. Explorez cette section pour découvrir les organisations qui font avancer l’avenir de notre industrie.</p>
+								<h2 class="mu-title" data-translate="sponsorsTitle">Nos commanditaires</h2>
+								<p data-translate="sponsorsDescription">Notre événement est rendu possible grâce au généreux soutien et à la collaboration de nos estimés commanditaires et partenaires. Ces organisations partagent notre vision et ont mis à contribution leurs ressources et leur expertise pour nous aider à offrir une expérience mémorable à tous les participants. Nous sommes fiers de mettre en valeur leurs contributions et vous encourageons à en apprendre davantage sur chacune d’elles. Leur engagement envers l’innovation, l’excellence et l’engagement communautaire s’aligne sur les valeurs fondamentales de notre événement, et nous sommes reconnaissants de leur partenariat. Explorez cette section pour découvrir les organisations qui font avancer l’avenir de notre industrie.</p>
 							</div>
 							
 							<!-- Start sponsors brand logo -->
@@ -966,8 +1051,8 @@
 						<div class="mu-contact-area">
 
 							<div class="mu-title-area">
-								<h2 class="mu-heading-title">Contactez-nous</h2>
-								<p>Nous apprécions vos demandes et sommes là pour vous aider à répondre à toutes vos questions ou préoccupations concernant l'événement. Que vous ayez besoin de plus d'informations sur le programme, l'inscription ou tout autre aspect de l'événement, notre équipe dédiée est prête à vous aider. N'hésitez pas à nous contacter via le formulaire de contact fourni, par telephone au +8617686682396, wechat: dorselpadonou1 ou par e-mail: contact@ubuntutradecompany.com. Nous nous efforçons de répondre rapidement et de nous assurer que vous disposez de toutes les informations dont vous avez besoin pour une expérience fluide. Votre satisfaction est importante pour nous et nous avons hâte de vous entendre !
+								<h2 class="mu-heading-title" data-translate="contactTitle">Contactez-nous</h2>
+								<p data-translate="contactDescription">Nous apprécions vos demandes et sommes là pour vous aider à répondre à toutes vos questions ou préoccupations concernant l'événement. Que vous ayez besoin de plus d'informations sur le programme, l'inscription ou tout autre aspect de l'événement, notre équipe dédiée est prête à vous aider. N'hésitez pas à nous contacter via le formulaire de contact fourni, par telephone au +8617686682396, wechat: dorselpadonou1 ou par e-mail: contact@ubuntutradecompany.com. Nous nous efforçons de répondre rapidement et de nous assurer que vous disposez de toutes les informations dont vous avez besoin pour une expérience fluide. Votre satisfaction est importante pour nous et nous avons hâte de vous entendre !
 								</p>
 							</div>
 
@@ -980,15 +1065,15 @@
 										<div id="form-messages"></div>
 											<form id="ajax-contact" method="post" action="mailer.php" class="mu-contact-form">
 												<div class="form-group">                
-													<input type="text" class="form-control" placeholder="Nom" id="name" name="name" required>
+													<input type="text" class="form-control" data-translate="fullNamePlaceholder" placeholder="Nom/Name" id="name" name="name" required>
 												</div>
 												<div class="form-group">                
-													<input type="email" class="form-control" placeholder="Entrez votre adresse e-mail" id="email" name="email" required>
+													<input type="email" class="form-control" data-translate="emailPlaceholder" placeholder="email" id="email" name="email" required>
 												</div>              
 												<div class="form-group">
-													<textarea class="form-control" placeholder="Message" id="message" name="message" required></textarea>
+													<textarea class="form-control" data-translate="messagePlaceholder" placeholder="Message" id="message" name="message" required></textarea>
 												</div>
-												<button type="submit" class="mu-send-msg-btn"><span>SOUMETTRE</span></button>
+												<button type="submit" class="mu-send-msg-btn" data-translate="submitButton"><span>SOUMETTRE</span></button>
 								            </form>
 										</div>
 									</div>
@@ -1021,7 +1106,7 @@
 						</div>
 					</div>
 					<div class="mu-footer-bottom">
-						<p class="mu-copy-right">&copy;  <a rel="nofollow" href="http://forum.ponaekolo.me" target="_blank">Pona Ekolo Event</a>. Tous droits réservés.</p>
+						<p class="mu-copy-right">&copy;  <a rel="nofollow" href="http://forum.ponaekolo.me" target="_blank" >Pona Ekolo Event</a>. <p data-translate="footerTitle">Tous droits réservés.</p>
 					</div>
 				</div>
 			</div>
