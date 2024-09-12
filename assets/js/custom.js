@@ -212,6 +212,36 @@
 	
 })( jQuery );
 
+// Set the event date
+var eventDate = new Date("October 12, 2024 00:00:00").getTime();
+						
+// Update the countdown every second
+var countdownFunction = setInterval(function() {
+
+	// Get the current date and time
+	var now = new Date().getTime();
+
+	// Calculate the difference between the event date and now
+	var timeDifference = eventDate - now;
+
+	// Time calculations for days, hours, minutes, and seconds
+	var days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+	var hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+	var minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+	var seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+	// Display the result in the respective HTML elements
+	document.getElementById("counter-days").innerHTML = days;
+	document.getElementById("counter-hours").innerHTML = hours;
+	document.getElementById("counter-minutes").innerHTML = minutes;
+	document.getElementById("counter-seconds").innerHTML = seconds;
+
+	// If the countdown is finished, display a message
+	if (timeDifference < 0) {
+		clearInterval(countdownFunction);
+		document.getElementById("mu-event-counter").innerHTML = "L'événement a commencé !";
+	}
+}, 1000);
 
 
   
