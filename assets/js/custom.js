@@ -239,7 +239,7 @@ var countdownFunction = setInterval(function() {
 	// If the countdown is finished, display a message
 	if (timeDifference < 0) {
 		clearInterval(countdownFunction);
-		document.getElementById("mu-event-counter").innerHTML = "L'événement a commencé !";
+		document.getElementById("mu-event-counter").innerHTML = "Merci pour vos précieuses contributions aujourd'hui. Nous espérons que vous avez trouvé les sessions instructives et inspirantes. Ce serveur sera hors service dans quelques heures, jusqu'à la prochaine fois !";
 	}
 }, 1000);
 
